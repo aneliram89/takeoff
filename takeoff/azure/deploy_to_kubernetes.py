@@ -19,7 +19,7 @@ from takeoff.azure.util import get_resource_group_name, get_kubernetes_name
 from takeoff.context import Context, ContextKey
 from takeoff.credentials.Secret import Secret
 from takeoff.credentials.application_name import ApplicationName
-from takeoff.schemas import TAKEOFF_BASE_SCHEMA
+from takeoff.schemas import TAKEOFF_BASE_SCHEMA, AZURE_SCHEMA
 from takeoff.step import Step
 from takeoff.util import render_string_with_jinja, b64_encode, run_shell_command
 
@@ -95,7 +95,8 @@ DEPLOY_SCHEMA = TAKEOFF_BASE_SCHEMA.extend(
             vol.Optional("namespace", default="default"): str,
         },
         vol.Optional("restart_unchanged_resources", default=False): bool,
-        "azure": {
+        vol.Optional("azure"): {
+            **AZURE_SCHEMA,
             vol.Required(
                 "kubernetes_naming",
                 description=(
@@ -106,7 +107,7 @@ DEPLOY_SCHEMA = TAKEOFF_BASE_SCHEMA.extend(
             ): str
         },
     },
-    extra=vol.ALLOW_EXTRA,
+    extra=vol.PREVENT_EXTRA,
 )
 
 
