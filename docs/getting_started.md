@@ -7,7 +7,7 @@ permalink: getting-started
 
 # Getting started
 
-The easiest way to use Takeoff for your project is to use the prebuilt Docker image available [here](DOCKERHUB LINK). Using this prebuilt image, you'll
+The easiest way to use Takeoff for your project is to use the prebuilt Docker image available [here]({{ site.project.dockerhub }}). Using this prebuilt image, you'll
 need to add 2 additional files to your project in order for Runway to function correctly.
 
 ## Takeoff Files

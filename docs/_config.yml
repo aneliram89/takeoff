@@ -3,6 +3,7 @@ name: Schiphol Takeoff
 project:
   version: 9.0.1 # TODO: this needs fixing
   github: https://github.com/schipholgroup/takeoff
+  dockerhub: https://hub.docker.com/r/schipholhub/takeoff
 
 markdown: kramdown
 
@@ -14,9 +15,13 @@ links:
   header:
   - title: GitHub
     url: https://github.com/schipholgroup/takeoff
+  - title: Dockerhub
+    url: https://hub.docker.com/r/schipholhub/takeoff
   footer:
   - title: GitHub
     url: https://github.com/schipholgroup/takeoff
+  - title: Dockerhub
+    url: https://hub.docker.com/r/schipholhub/takeoff
   - title: Issues
     url: https://github.com/schipholgroup/takeoff/issues
 
